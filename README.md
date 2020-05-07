@@ -12,4 +12,6 @@ practice python
 - Transform parse tree into an Abstract Syntax Tree (Python/ast.c)
 - Transform AST into a Control Flow Graph (Python/compile.c)
 - Emit bytecode based on the Control Flow Graph (Python/compile.c)
-- 源代码解析 --> 语法树 --> 抽象语法树(AST) --> 控制流程图 --> 字节码
+
+## pipenv
+- have a try
