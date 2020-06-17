@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.2 on win32)" generated="20200618 00:24:06.118" rpa="false">
+<suite id="s1" name="Test-Case" source="C:\Users\pizza\python_playground\robot_dryrun\test-case">
+<suite id="s1-s1" name="Test" source="C:\Users\pizza\python_playground\robot_dryrun\test-case\test.robot">
+<test id="s1-s1-t1" name="My Test">
+<kw name="This Keyword Exist In Test">
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200618 00:24:06.150" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20200618 00:24:06.150" level="TRACE">Return: 'OK'</msg>
+<msg timestamp="20200618 00:24:06.150" level="INFO">${result} = OK</msg>
+<status status="PASS" starttime="20200618 00:24:06.150" endtime="20200618 00:24:06.150"></status>
+</kw>
+<kw name="This Keyword Not Exist In Test">
+<msg timestamp="20200618 00:24:06.151" level="FAIL">No keyword with name 'This Keyword Not Exist In Test' found. Did you mean:
+    This Keyword Exist In Test</msg>
+<status status="FAIL" starttime="20200618 00:24:06.151" endtime="20200618 00:24:06.151"></status>
+</kw>
+<status status="FAIL" starttime="20200618 00:24:06.149" endtime="20200618 00:24:06.152" critical="yes">No keyword with name 'This Keyword Not Exist In Test' found. Did you mean:
+    This Keyword Exist In Test</status>
+</test>
+<status status="FAIL" starttime="20200618 00:24:06.140" endtime="20200618 00:24:06.153"></status>
+</suite>
+<status status="FAIL" starttime="20200618 00:24:06.119" endtime="20200618 00:24:06.154"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Test-Case">Test-Case</stat>
+<stat pass="0" fail="1" id="s1-s1" name="Test">Test-Case.Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
