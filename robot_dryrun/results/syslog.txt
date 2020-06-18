@@ -1,6 +1,6 @@
-20200618 00:24:06.111 | INFO  | Robot Framework 3.2.1 (Python 3.8.2 on win32)
-20200618 00:24:06.112 | INFO  | Arguments: test-case
-20200618 00:24:06.112 | INFO  | Settings:
+20200618 23:50:07.591 | INFO  | Robot Framework 3.2.1 (Python 3.8.2 on win32)
+20200618 23:50:07.591 | INFO  | Arguments: test-case
+20200618 23:50:07.591 | INFO  | Settings:
 ConsoleColors: AUTO
 ConsoleMarkers: AUTO
 ConsoleType: verbose
@@ -8,7 +8,7 @@ ConsoleTypeDotted: False
 ConsoleTypeQuiet: False
 ConsoleWidth: 78
 Critical: None
-DebugFile: None
+DebugFile: debug.txt
 Doc: None
 DryRun: False
 Exclude: []
@@ -60,162 +60,163 @@ Variables: []
 VisibleLogLevel: INFO
 XUnit: None
 XUnitSkipNonCritical: False
-20200618 00:24:06.113 | INFO  | Parsing directory 'C:\Users\pizza\python_playground\robot_dryrun\test-case'.
-20200618 00:24:06.113 | INFO  | Parsing file 'C:\Users\pizza\python_playground\robot_dryrun\test-case\test.robot'.
-20200618 00:24:06.118 | INFO  | No debug file
-20200618 00:24:06.119 | INFO  | Initializing namespace for test suite 'Test-Case'
-20200618 00:24:06.123 | INFO  | Imported test library class 'robot.libraries.BuiltIn' from 'c:\users\pizza\appdata\local\programs\python\python38\lib\site-packages\robot\libraries\BuiltIn.py'.
-20200618 00:24:06.124 | INFO  | In library 'BuiltIn': Adding keyword 'ROBOT_LIBRARY_SCOPE' failed: Not a method or function.
-20200618 00:24:06.124 | INFO  | In library 'BuiltIn': Adding keyword 'ROBOT_LIBRARY_VERSION' failed: Not a method or function.
-20200618 00:24:06.124 | DEBUG | Created keyword 'Call Method'
-20200618 00:24:06.124 | DEBUG | Created keyword 'Catenate'
-20200618 00:24:06.124 | DEBUG | Created keyword 'Comment'
-20200618 00:24:06.124 | DEBUG | Created keyword 'Continue For Loop'
-20200618 00:24:06.124 | DEBUG | Created keyword 'Continue For Loop If'
-20200618 00:24:06.125 | DEBUG | Created keyword 'Convert To Binary'
-20200618 00:24:06.125 | DEBUG | Created keyword 'Convert To Boolean'
-20200618 00:24:06.125 | DEBUG | Created keyword 'Convert To Bytes'
-20200618 00:24:06.125 | DEBUG | Created keyword 'Convert To Hex'
-20200618 00:24:06.125 | DEBUG | Created keyword 'Convert To Integer'
-20200618 00:24:06.125 | DEBUG | Created keyword 'Convert To Number'
-20200618 00:24:06.125 | DEBUG | Created keyword 'Convert To Octal'
-20200618 00:24:06.125 | DEBUG | Created keyword 'Convert To String'
-20200618 00:24:06.125 | DEBUG | Created keyword 'Create Dictionary'
-20200618 00:24:06.125 | DEBUG | Created keyword 'Create List'
-20200618 00:24:06.126 | DEBUG | Created keyword 'Evaluate'
-20200618 00:24:06.126 | DEBUG | Created keyword 'Exit For Loop'
-20200618 00:24:06.126 | DEBUG | Created keyword 'Exit For Loop If'
-20200618 00:24:06.126 | DEBUG | Created keyword 'Fail'
-20200618 00:24:06.126 | DEBUG | Created keyword 'Fatal Error'
-20200618 00:24:06.126 | DEBUG | Created keyword 'Get Count'
-20200618 00:24:06.126 | DEBUG | Created keyword 'Get Length'
-20200618 00:24:06.126 | DEBUG | Created keyword 'Get Library Instance'
-20200618 00:24:06.126 | DEBUG | Created keyword 'Get Time'
-20200618 00:24:06.126 | DEBUG | Created keyword 'Get Variable Value'
-20200618 00:24:06.127 | DEBUG | Created keyword 'Get Variables'
-20200618 00:24:06.127 | DEBUG | Created keyword 'Import Library'
-20200618 00:24:06.127 | DEBUG | Created keyword 'Import Resource'
-20200618 00:24:06.127 | DEBUG | Created keyword 'Import Variables'
-20200618 00:24:06.127 | DEBUG | Created keyword 'Keyword Should Exist'
-20200618 00:24:06.127 | DEBUG | Created keyword 'Length Should Be'
-20200618 00:24:06.127 | DEBUG | Created keyword 'Log'
-20200618 00:24:06.127 | DEBUG | Created keyword 'Log Many'
-20200618 00:24:06.127 | DEBUG | Created keyword 'Log To Console'
-20200618 00:24:06.127 | DEBUG | Created keyword 'Log Variables'
-20200618 00:24:06.127 | DEBUG | Created keyword 'No Operation'
-20200618 00:24:06.128 | DEBUG | Created keyword 'Pass Execution'
-20200618 00:24:06.128 | DEBUG | Created keyword 'Pass Execution If'
-20200618 00:24:06.128 | DEBUG | Created keyword 'Regexp Escape'
-20200618 00:24:06.128 | DEBUG | Created keyword 'Reload Library'
-20200618 00:24:06.128 | DEBUG | Created keyword 'Remove Tags'
-20200618 00:24:06.128 | DEBUG | Created keyword 'Repeat Keyword'
-20200618 00:24:06.128 | DEBUG | Created keyword 'Replace Variables'
-20200618 00:24:06.128 | DEBUG | Created keyword 'Return From Keyword'
-20200618 00:24:06.128 | DEBUG | Created keyword 'Return From Keyword If'
-20200618 00:24:06.128 | DEBUG | Created keyword 'Run Keyword'
-20200618 00:24:06.128 | DEBUG | Created keyword 'Run Keyword And Continue On Failure'
-20200618 00:24:06.129 | DEBUG | Created keyword 'Run Keyword And Expect Error'
-20200618 00:24:06.129 | DEBUG | Created keyword 'Run Keyword And Ignore Error'
-20200618 00:24:06.129 | DEBUG | Created keyword 'Run Keyword And Return'
-20200618 00:24:06.129 | DEBUG | Created keyword 'Run Keyword And Return If'
-20200618 00:24:06.129 | DEBUG | Created keyword 'Run Keyword And Return Status'
-20200618 00:24:06.129 | DEBUG | Created keyword 'Run Keyword If'
-20200618 00:24:06.129 | DEBUG | Created keyword 'Run Keyword If All Critical Tests Passed'
-20200618 00:24:06.129 | DEBUG | Created keyword 'Run Keyword If All Tests Passed'
-20200618 00:24:06.129 | DEBUG | Created keyword 'Run Keyword If Any Critical Tests Failed'
-20200618 00:24:06.129 | DEBUG | Created keyword 'Run Keyword If Any Tests Failed'
-20200618 00:24:06.129 | DEBUG | Created keyword 'Run Keyword If Test Failed'
-20200618 00:24:06.129 | DEBUG | Created keyword 'Run Keyword If Test Passed'
-20200618 00:24:06.130 | DEBUG | Created keyword 'Run Keyword If Timeout Occurred'
-20200618 00:24:06.130 | DEBUG | Created keyword 'Run Keyword Unless'
-20200618 00:24:06.130 | DEBUG | Created keyword 'Run Keywords'
-20200618 00:24:06.130 | DEBUG | Created keyword 'Set Global Variable'
-20200618 00:24:06.130 | DEBUG | Created keyword 'Set Library Search Order'
-20200618 00:24:06.130 | DEBUG | Created keyword 'Set Local Variable'
-20200618 00:24:06.130 | DEBUG | Created keyword 'Set Log Level'
-20200618 00:24:06.130 | DEBUG | Created keyword 'Set Suite Documentation'
-20200618 00:24:06.130 | DEBUG | Created keyword 'Set Suite Metadata'
-20200618 00:24:06.130 | DEBUG | Created keyword 'Set Suite Variable'
-20200618 00:24:06.130 | DEBUG | Created keyword 'Set Tags'
-20200618 00:24:06.131 | DEBUG | Created keyword 'Set Task Variable'
-20200618 00:24:06.131 | DEBUG | Created keyword 'Set Test Documentation'
-20200618 00:24:06.131 | DEBUG | Created keyword 'Set Test Message'
-20200618 00:24:06.131 | DEBUG | Created keyword 'Set Test Variable'
-20200618 00:24:06.131 | DEBUG | Created keyword 'Set Variable'
-20200618 00:24:06.132 | DEBUG | Created keyword 'Set Variable If'
-20200618 00:24:06.132 | DEBUG | Created keyword 'Should Be Empty'
-20200618 00:24:06.132 | DEBUG | Created keyword 'Should Be Equal'
-20200618 00:24:06.132 | DEBUG | Created keyword 'Should Be Equal As Integers'
-20200618 00:24:06.132 | DEBUG | Created keyword 'Should Be Equal As Numbers'
-20200618 00:24:06.133 | DEBUG | Created keyword 'Should Be Equal As Strings'
-20200618 00:24:06.133 | DEBUG | Created keyword 'Should Be True'
-20200618 00:24:06.133 | DEBUG | Created keyword 'Should Contain'
-20200618 00:24:06.133 | DEBUG | Created keyword 'Should Contain Any'
-20200618 00:24:06.133 | DEBUG | Created keyword 'Should Contain X Times'
-20200618 00:24:06.133 | DEBUG | Created keyword 'Should End With'
-20200618 00:24:06.133 | DEBUG | Created keyword 'Should Match'
-20200618 00:24:06.133 | DEBUG | Created keyword 'Should Match Regexp'
-20200618 00:24:06.134 | DEBUG | Created keyword 'Should Not Be Empty'
-20200618 00:24:06.134 | DEBUG | Created keyword 'Should Not Be Equal'
-20200618 00:24:06.134 | DEBUG | Created keyword 'Should Not Be Equal As Integers'
-20200618 00:24:06.134 | DEBUG | Created keyword 'Should Not Be Equal As Numbers'
-20200618 00:24:06.134 | DEBUG | Created keyword 'Should Not Be Equal As Strings'
-20200618 00:24:06.134 | DEBUG | Created keyword 'Should Not Be True'
-20200618 00:24:06.134 | DEBUG | Created keyword 'Should Not Contain'
-20200618 00:24:06.134 | DEBUG | Created keyword 'Should Not Contain Any'
-20200618 00:24:06.134 | DEBUG | Created keyword 'Should Not End With'
-20200618 00:24:06.134 | DEBUG | Created keyword 'Should Not Match'
-20200618 00:24:06.135 | DEBUG | Created keyword 'Should Not Match Regexp'
-20200618 00:24:06.135 | DEBUG | Created keyword 'Should Not Start With'
-20200618 00:24:06.135 | DEBUG | Created keyword 'Should Start With'
-20200618 00:24:06.135 | DEBUG | Created keyword 'Sleep'
-20200618 00:24:06.135 | DEBUG | Created keyword 'Variable Should Exist'
-20200618 00:24:06.135 | DEBUG | Created keyword 'Variable Should Not Exist'
-20200618 00:24:06.135 | DEBUG | Created keyword 'Wait Until Keyword Succeeds'
-20200618 00:24:06.135 | INFO  | Imported library 'BuiltIn' with arguments [ ] (version 3.2.1, class type, GLOBAL scope, 105 keywords)
-20200618 00:24:06.136 | INFO  | Imported test library class 'robot.libraries.Reserved' from 'c:\users\pizza\appdata\local\programs\python\python38\lib\site-packages\robot\libraries\Reserved.py'.
-20200618 00:24:06.137 | DEBUG | Created keyword 'For'
-20200618 00:24:06.137 | DEBUG | Created keyword 'While'
-20200618 00:24:06.137 | DEBUG | Created keyword 'Break'
-20200618 00:24:06.137 | DEBUG | Created keyword 'Continue'
-20200618 00:24:06.137 | DEBUG | Created keyword 'End'
-20200618 00:24:06.137 | DEBUG | Created keyword 'If'
-20200618 00:24:06.137 | DEBUG | Created keyword 'Else'
-20200618 00:24:06.138 | DEBUG | Created keyword 'Elif'
-20200618 00:24:06.138 | DEBUG | Created keyword 'Else If'
-20200618 00:24:06.138 | DEBUG | Created keyword 'Return'
-20200618 00:24:06.138 | INFO  | Imported library 'Reserved' with arguments [ ] (version <unknown>, dynamic type, GLOBAL scope, 10 keywords)
-20200618 00:24:06.139 | INFO  | Imported test library module 'robot.libraries.Easter' from 'c:\users\pizza\appdata\local\programs\python\python38\lib\site-packages\robot\libraries\Easter.py'.
-20200618 00:24:06.139 | INFO  | In library 'Easter': Adding keyword 'logger' failed: Not a method or function.
-20200618 00:24:06.139 | DEBUG | Created keyword 'None Shall Pass'
-20200618 00:24:06.139 | INFO  | Imported library 'Easter' with arguments [ ] (version <unknown>, module type, GLOBAL scope, 1 keywords)
-20200618 00:24:06.140 | INFO  | Started test suite 'Test-Case'
-20200618 00:24:06.140 | INFO  | Initializing namespace for test suite 'Test-Case.Test'
-20200618 00:24:06.140 | INFO  | Imported test library class 'robot.libraries.BuiltIn' from 'c:\users\pizza\appdata\local\programs\python\python38\lib\site-packages\robot\libraries\BuiltIn.py'.
-20200618 00:24:06.141 | INFO  | Found test library 'BuiltIn' with arguments [ ] from cache
-20200618 00:24:06.141 | INFO  | Imported test library class 'robot.libraries.Reserved' from 'c:\users\pizza\appdata\local\programs\python\python38\lib\site-packages\robot\libraries\Reserved.py'.
-20200618 00:24:06.141 | INFO  | Found test library 'Reserved' with arguments [ ] from cache
-20200618 00:24:06.141 | INFO  | Imported test library module 'robot.libraries.Easter' from 'c:\users\pizza\appdata\local\programs\python\python38\lib\site-packages\robot\libraries\Easter.py'.
-20200618 00:24:06.141 | INFO  | Found test library 'Easter' with arguments [ ] from cache
-20200618 00:24:06.146 | INFO  | Imported test library module 'C:\Users\pizza\python_playground\robot_dryrun\RobotLib\robotlib.py' from 'C:\Users\pizza\python_playground\robot_dryrun\RobotLib\robotlib.py'.
-20200618 00:24:06.146 | INFO  | In library 'robotlib': Adding keyword 'logging' failed: Not a method or function.
-20200618 00:24:06.146 | INFO  | In library 'robotlib': Adding keyword 'pythonlib' failed: Not a method or function.
-20200618 00:24:06.147 | DEBUG | Created keyword 'This Keyword Exist In Robotlib'
-20200618 00:24:06.147 | INFO  | Imported library 'C:\Users\pizza\python_playground\robot_dryrun\RobotLib\robotlib.py' with arguments [ ] (version <unknown>, module type, GLOBAL scope, 1 keywords)
-20200618 00:24:06.147 | INFO  | Parsing resource file 'C:\Users\pizza\python_playground\robot_dryrun\keywords\keywords.robot'.
-20200618 00:24:06.148 | INFO  | Imported resource file 'C:\Users\pizza\python_playground\robot_dryrun\keywords\keywords.robot' (1 keywords).
-20200618 00:24:06.149 | INFO  | Started test suite 'Test'
-20200618 00:24:06.149 | INFO  | Started test case 'My Test'
-20200618 00:24:06.150 | DEBUG | Started keyword 'This Keyword Exist In Test'
-20200618 00:24:06.150 | DEBUG | Ended keyword 'This Keyword Exist In Test'
-20200618 00:24:06.151 | DEBUG | Started keyword 'This Keyword Not Exist In Test'
-20200618 00:24:06.152 | DEBUG | Ended keyword 'This Keyword Not Exist In Test'
-20200618 00:24:06.153 | INFO  | Ended test case 'My Test'
-20200618 00:24:06.154 | INFO  | Ended test suite 'Test'
-20200618 00:24:06.155 | INFO  | Ended test suite 'Test-Case'
-20200618 00:24:06.156 | INFO  | Output: C:\Users\pizza\python_playground\robot_dryrun\results\output.xml
-20200618 00:24:06.156 | INFO  | Tests execution ended. Statistics:
+20200618 23:50:07.592 | INFO  | Parsing directory 'C:\Users\pizza\python_playground\robot_dryrun\test-case'.
+20200618 23:50:07.592 | INFO  | Parsing file 'C:\Users\pizza\python_playground\robot_dryrun\test-case\test.robot'.
+20200618 23:50:07.596 | INFO  | Debug file: C:\Users\pizza\python_playground\robot_dryrun\results\debug.txt
+20200618 23:50:07.597 | INFO  | Initializing namespace for test suite 'Test-Case'
+20200618 23:50:07.600 | INFO  | Imported test library class 'robot.libraries.BuiltIn' from 'c:\users\pizza\appdata\local\programs\python\python38\lib\site-packages\robot\libraries\BuiltIn.py'.
+20200618 23:50:07.601 | INFO  | In library 'BuiltIn': Adding keyword 'ROBOT_LIBRARY_SCOPE' failed: Not a method or function.
+20200618 23:50:07.601 | INFO  | In library 'BuiltIn': Adding keyword 'ROBOT_LIBRARY_VERSION' failed: Not a method or function.
+20200618 23:50:07.602 | DEBUG | Created keyword 'Call Method'
+20200618 23:50:07.602 | DEBUG | Created keyword 'Catenate'
+20200618 23:50:07.602 | DEBUG | Created keyword 'Comment'
+20200618 23:50:07.602 | DEBUG | Created keyword 'Continue For Loop'
+20200618 23:50:07.602 | DEBUG | Created keyword 'Continue For Loop If'
+20200618 23:50:07.602 | DEBUG | Created keyword 'Convert To Binary'
+20200618 23:50:07.602 | DEBUG | Created keyword 'Convert To Boolean'
+20200618 23:50:07.602 | DEBUG | Created keyword 'Convert To Bytes'
+20200618 23:50:07.602 | DEBUG | Created keyword 'Convert To Hex'
+20200618 23:50:07.602 | DEBUG | Created keyword 'Convert To Integer'
+20200618 23:50:07.603 | DEBUG | Created keyword 'Convert To Number'
+20200618 23:50:07.603 | DEBUG | Created keyword 'Convert To Octal'
+20200618 23:50:07.603 | DEBUG | Created keyword 'Convert To String'
+20200618 23:50:07.603 | DEBUG | Created keyword 'Create Dictionary'
+20200618 23:50:07.603 | DEBUG | Created keyword 'Create List'
+20200618 23:50:07.603 | DEBUG | Created keyword 'Evaluate'
+20200618 23:50:07.603 | DEBUG | Created keyword 'Exit For Loop'
+20200618 23:50:07.603 | DEBUG | Created keyword 'Exit For Loop If'
+20200618 23:50:07.603 | DEBUG | Created keyword 'Fail'
+20200618 23:50:07.603 | DEBUG | Created keyword 'Fatal Error'
+20200618 23:50:07.604 | DEBUG | Created keyword 'Get Count'
+20200618 23:50:07.604 | DEBUG | Created keyword 'Get Length'
+20200618 23:50:07.604 | DEBUG | Created keyword 'Get Library Instance'
+20200618 23:50:07.604 | DEBUG | Created keyword 'Get Time'
+20200618 23:50:07.604 | DEBUG | Created keyword 'Get Variable Value'
+20200618 23:50:07.604 | DEBUG | Created keyword 'Get Variables'
+20200618 23:50:07.604 | DEBUG | Created keyword 'Import Library'
+20200618 23:50:07.604 | DEBUG | Created keyword 'Import Resource'
+20200618 23:50:07.604 | DEBUG | Created keyword 'Import Variables'
+20200618 23:50:07.604 | DEBUG | Created keyword 'Keyword Should Exist'
+20200618 23:50:07.604 | DEBUG | Created keyword 'Length Should Be'
+20200618 23:50:07.605 | DEBUG | Created keyword 'Log'
+20200618 23:50:07.605 | DEBUG | Created keyword 'Log Many'
+20200618 23:50:07.605 | DEBUG | Created keyword 'Log To Console'
+20200618 23:50:07.605 | DEBUG | Created keyword 'Log Variables'
+20200618 23:50:07.605 | DEBUG | Created keyword 'No Operation'
+20200618 23:50:07.605 | DEBUG | Created keyword 'Pass Execution'
+20200618 23:50:07.605 | DEBUG | Created keyword 'Pass Execution If'
+20200618 23:50:07.605 | DEBUG | Created keyword 'Regexp Escape'
+20200618 23:50:07.605 | DEBUG | Created keyword 'Reload Library'
+20200618 23:50:07.605 | DEBUG | Created keyword 'Remove Tags'
+20200618 23:50:07.605 | DEBUG | Created keyword 'Repeat Keyword'
+20200618 23:50:07.606 | DEBUG | Created keyword 'Replace Variables'
+20200618 23:50:07.606 | DEBUG | Created keyword 'Return From Keyword'
+20200618 23:50:07.606 | DEBUG | Created keyword 'Return From Keyword If'
+20200618 23:50:07.606 | DEBUG | Created keyword 'Run Keyword'
+20200618 23:50:07.606 | DEBUG | Created keyword 'Run Keyword And Continue On Failure'
+20200618 23:50:07.606 | DEBUG | Created keyword 'Run Keyword And Expect Error'
+20200618 23:50:07.606 | DEBUG | Created keyword 'Run Keyword And Ignore Error'
+20200618 23:50:07.606 | DEBUG | Created keyword 'Run Keyword And Return'
+20200618 23:50:07.606 | DEBUG | Created keyword 'Run Keyword And Return If'
+20200618 23:50:07.606 | DEBUG | Created keyword 'Run Keyword And Return Status'
+20200618 23:50:07.607 | DEBUG | Created keyword 'Run Keyword If'
+20200618 23:50:07.607 | DEBUG | Created keyword 'Run Keyword If All Critical Tests Passed'
+20200618 23:50:07.607 | DEBUG | Created keyword 'Run Keyword If All Tests Passed'
+20200618 23:50:07.607 | DEBUG | Created keyword 'Run Keyword If Any Critical Tests Failed'
+20200618 23:50:07.607 | DEBUG | Created keyword 'Run Keyword If Any Tests Failed'
+20200618 23:50:07.607 | DEBUG | Created keyword 'Run Keyword If Test Failed'
+20200618 23:50:07.607 | DEBUG | Created keyword 'Run Keyword If Test Passed'
+20200618 23:50:07.607 | DEBUG | Created keyword 'Run Keyword If Timeout Occurred'
+20200618 23:50:07.607 | DEBUG | Created keyword 'Run Keyword Unless'
+20200618 23:50:07.607 | DEBUG | Created keyword 'Run Keywords'
+20200618 23:50:07.607 | DEBUG | Created keyword 'Set Global Variable'
+20200618 23:50:07.607 | DEBUG | Created keyword 'Set Library Search Order'
+20200618 23:50:07.608 | DEBUG | Created keyword 'Set Local Variable'
+20200618 23:50:07.608 | DEBUG | Created keyword 'Set Log Level'
+20200618 23:50:07.608 | DEBUG | Created keyword 'Set Suite Documentation'
+20200618 23:50:07.608 | DEBUG | Created keyword 'Set Suite Metadata'
+20200618 23:50:07.608 | DEBUG | Created keyword 'Set Suite Variable'
+20200618 23:50:07.608 | DEBUG | Created keyword 'Set Tags'
+20200618 23:50:07.608 | DEBUG | Created keyword 'Set Task Variable'
+20200618 23:50:07.608 | DEBUG | Created keyword 'Set Test Documentation'
+20200618 23:50:07.608 | DEBUG | Created keyword 'Set Test Message'
+20200618 23:50:07.608 | DEBUG | Created keyword 'Set Test Variable'
+20200618 23:50:07.608 | DEBUG | Created keyword 'Set Variable'
+20200618 23:50:07.609 | DEBUG | Created keyword 'Set Variable If'
+20200618 23:50:07.609 | DEBUG | Created keyword 'Should Be Empty'
+20200618 23:50:07.609 | DEBUG | Created keyword 'Should Be Equal'
+20200618 23:50:07.609 | DEBUG | Created keyword 'Should Be Equal As Integers'
+20200618 23:50:07.609 | DEBUG | Created keyword 'Should Be Equal As Numbers'
+20200618 23:50:07.609 | DEBUG | Created keyword 'Should Be Equal As Strings'
+20200618 23:50:07.609 | DEBUG | Created keyword 'Should Be True'
+20200618 23:50:07.609 | DEBUG | Created keyword 'Should Contain'
+20200618 23:50:07.609 | DEBUG | Created keyword 'Should Contain Any'
+20200618 23:50:07.609 | DEBUG | Created keyword 'Should Contain X Times'
+20200618 23:50:07.610 | DEBUG | Created keyword 'Should End With'
+20200618 23:50:07.610 | DEBUG | Created keyword 'Should Match'
+20200618 23:50:07.610 | DEBUG | Created keyword 'Should Match Regexp'
+20200618 23:50:07.610 | DEBUG | Created keyword 'Should Not Be Empty'
+20200618 23:50:07.610 | DEBUG | Created keyword 'Should Not Be Equal'
+20200618 23:50:07.610 | DEBUG | Created keyword 'Should Not Be Equal As Integers'
+20200618 23:50:07.610 | DEBUG | Created keyword 'Should Not Be Equal As Numbers'
+20200618 23:50:07.610 | DEBUG | Created keyword 'Should Not Be Equal As Strings'
+20200618 23:50:07.610 | DEBUG | Created keyword 'Should Not Be True'
+20200618 23:50:07.611 | DEBUG | Created keyword 'Should Not Contain'
+20200618 23:50:07.611 | DEBUG | Created keyword 'Should Not Contain Any'
+20200618 23:50:07.611 | DEBUG | Created keyword 'Should Not End With'
+20200618 23:50:07.611 | DEBUG | Created keyword 'Should Not Match'
+20200618 23:50:07.611 | DEBUG | Created keyword 'Should Not Match Regexp'
+20200618 23:50:07.611 | DEBUG | Created keyword 'Should Not Start With'
+20200618 23:50:07.611 | DEBUG | Created keyword 'Should Start With'
+20200618 23:50:07.611 | DEBUG | Created keyword 'Sleep'
+20200618 23:50:07.611 | DEBUG | Created keyword 'Variable Should Exist'
+20200618 23:50:07.611 | DEBUG | Created keyword 'Variable Should Not Exist'
+20200618 23:50:07.611 | DEBUG | Created keyword 'Wait Until Keyword Succeeds'
+20200618 23:50:07.611 | INFO  | Imported library 'BuiltIn' with arguments [ ] (version 3.2.1, class type, GLOBAL scope, 105 keywords)
+20200618 23:50:07.612 | INFO  | Imported test library class 'robot.libraries.Reserved' from 'c:\users\pizza\appdata\local\programs\python\python38\lib\site-packages\robot\libraries\Reserved.py'.
+20200618 23:50:07.613 | DEBUG | Created keyword 'For'
+20200618 23:50:07.613 | DEBUG | Created keyword 'While'
+20200618 23:50:07.613 | DEBUG | Created keyword 'Break'
+20200618 23:50:07.613 | DEBUG | Created keyword 'Continue'
+20200618 23:50:07.613 | DEBUG | Created keyword 'End'
+20200618 23:50:07.613 | DEBUG | Created keyword 'If'
+20200618 23:50:07.613 | DEBUG | Created keyword 'Else'
+20200618 23:50:07.613 | DEBUG | Created keyword 'Elif'
+20200618 23:50:07.614 | DEBUG | Created keyword 'Else If'
+20200618 23:50:07.614 | DEBUG | Created keyword 'Return'
+20200618 23:50:07.614 | INFO  | Imported library 'Reserved' with arguments [ ] (version <unknown>, dynamic type, GLOBAL scope, 10 keywords)
+20200618 23:50:07.614 | INFO  | Imported test library module 'robot.libraries.Easter' from 'c:\users\pizza\appdata\local\programs\python\python38\lib\site-packages\robot\libraries\Easter.py'.
+20200618 23:50:07.615 | INFO  | In library 'Easter': Adding keyword 'logger' failed: Not a method or function.
+20200618 23:50:07.615 | DEBUG | Created keyword 'None Shall Pass'
+20200618 23:50:07.615 | INFO  | Imported library 'Easter' with arguments [ ] (version <unknown>, module type, GLOBAL scope, 1 keywords)
+20200618 23:50:07.618 | INFO  | Started test suite 'Test-Case'
+20200618 23:50:07.618 | INFO  | Initializing namespace for test suite 'Test-Case.Test'
+20200618 23:50:07.619 | INFO  | Imported test library class 'robot.libraries.BuiltIn' from 'c:\users\pizza\appdata\local\programs\python\python38\lib\site-packages\robot\libraries\BuiltIn.py'.
+20200618 23:50:07.619 | INFO  | Found test library 'BuiltIn' with arguments [ ] from cache
+20200618 23:50:07.620 | INFO  | Imported test library class 'robot.libraries.Reserved' from 'c:\users\pizza\appdata\local\programs\python\python38\lib\site-packages\robot\libraries\Reserved.py'.
+20200618 23:50:07.620 | INFO  | Found test library 'Reserved' with arguments [ ] from cache
+20200618 23:50:07.620 | INFO  | Imported test library module 'robot.libraries.Easter' from 'c:\users\pizza\appdata\local\programs\python\python38\lib\site-packages\robot\libraries\Easter.py'.
+20200618 23:50:07.620 | INFO  | Found test library 'Easter' with arguments [ ] from cache
+20200618 23:50:07.625 | INFO  | Imported test library module 'C:\Users\pizza\python_playground\robot_dryrun\RobotLib\robotlib.py' from 'C:\Users\pizza\python_playground\robot_dryrun\RobotLib\robotlib.py'.
+20200618 23:50:07.625 | INFO  | In library 'robotlib': Adding keyword 'logging' failed: Not a method or function.
+20200618 23:50:07.625 | INFO  | In library 'robotlib': Adding keyword 'pythonlib' failed: Not a method or function.
+20200618 23:50:07.625 | DEBUG | Created keyword 'This Keyword Exist In Robotlib'
+20200618 23:50:07.625 | INFO  | Imported library 'C:\Users\pizza\python_playground\robot_dryrun\RobotLib\robotlib.py' with arguments [ ] (version <unknown>, module type, GLOBAL scope, 1 keywords)
+20200618 23:50:07.626 | INFO  | Parsing resource file 'C:\Users\pizza\python_playground\robot_dryrun\keywords\keywords.robot'.
+20200618 23:50:07.626 | INFO  | Imported resource file 'C:\Users\pizza\python_playground\robot_dryrun\keywords\keywords.robot' (1 keywords).
+20200618 23:50:07.627 | INFO  | Started test suite 'Test'
+20200618 23:50:07.628 | INFO  | Started test case 'My Test'
+20200618 23:50:07.628 | DEBUG | Started keyword 'This Keyword Exist In Test'
+20200618 23:50:07.629 | DEBUG | Ended keyword 'This Keyword Exist In Test'
+20200618 23:50:07.631 | DEBUG | Started keyword 'This Keyword Not Exist In Test'
+20200618 23:50:07.632 | DEBUG | Ended keyword 'This Keyword Not Exist In Test'
+20200618 23:50:07.633 | INFO  | Ended test case 'My Test'
+20200618 23:50:07.635 | INFO  | Ended test suite 'Test'
+20200618 23:50:07.636 | INFO  | Ended test suite 'Test-Case'
+20200618 23:50:07.636 | INFO  | Debug: C:\Users\pizza\python_playground\robot_dryrun\results\debug.txt
+20200618 23:50:07.637 | INFO  | Output: C:\Users\pizza\python_playground\robot_dryrun\results\output.xml
+20200618 23:50:07.637 | INFO  | Tests execution ended. Statistics:
 1 critical test, 0 passed, 1 failed
 1 test total, 0 passed, 1 failed
-20200618 00:24:06.179 | INFO  | Log: C:\Users\pizza\python_playground\robot_dryrun\results\log.html
-20200618 00:24:06.195 | INFO  | Report: C:\Users\pizza\python_playground\robot_dryrun\results\report.html
+20200618 23:50:07.661 | INFO  | Log: C:\Users\pizza\python_playground\robot_dryrun\results\log.html
+20200618 23:50:07.684 | INFO  | Report: C:\Users\pizza\python_playground\robot_dryrun\results\report.html
