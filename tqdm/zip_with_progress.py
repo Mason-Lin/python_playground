@@ -1,11 +1,11 @@
-from pathlib import Path
-from tqdm import tqdm
-from zipfile import ZipFile, ZIP_DEFLATED
-
-import shutil
-import time
 import os
 import pprint
+import shutil
+import time
+from pathlib import Path
+from zipfile import ZIP_DEFLATED, ZipFile
+
+from tqdm import tqdm
 
 MB = 1024*1024
 
