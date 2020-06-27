@@ -1,3 +1,4 @@
+import operator
 import struct
 import sys
 
@@ -104,8 +105,17 @@ assert list(enumerate(c)) == [(0, 'a'), (1, 'b')]
 x = 1
 assert eval('x+1') == 2
 
-# exec()
-# filter()
+assert exec('''
+print("Hello")
+''') == None
+
+# try to filter value less than 2
+iterable = {"a": 1, "b": 2, "c": 3}
+function = lambda elem: elem[1] < 2
+print(iterable)
+
+result = dict(filter(function, iterable.items()))
+assert result == {'a': 1}
 # float()
 # format()
 # frozenset()
