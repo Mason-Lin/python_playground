@@ -1,12 +1,17 @@
+import struct
 import sys
 
 
 #
 assert abs(-10) == 10
 assert abs(-10.5) == 10.5
+
+
 class TestClass():
     def __abs__(self):
         return 5
+
+
 tt = TestClass()
 assert abs(tt) == 5
 
@@ -49,8 +54,11 @@ assert complex('1+2j') + 1 == complex('2+2j')
 assert complex('1+2j') + complex('0+2j') == complex('1+4j')
 
 #
+
+
 class TestClass():
     apple = 'red'
+
 
 assert hasattr(TestClass, 'apple') == True
 assert hasattr(TestClass, 'banana') == False
@@ -75,20 +83,33 @@ except AttributeError:
 else:
     pass
 
+#
+assert dict(k='v') == {'k': 'v'}
+assert dict(zip(['k'], ['v'])) == {'k': 'v'}
+assert 'unpack' in dir(struct)
 
-# dict()
-# dir()
-# divmod()
-# enumerate()
-# eval()
+
+class Shape():
+    def __dir__(self):
+        return ['a', 'b']
+
+
+s = Shape()
+assert dir(s) == ['a', 'b']
+
+
+assert divmod(5, 3) == (1, 2)
+c = ['a', 'b']
+assert list(enumerate(c)) == [(0, 'a'), (1, 'b')]
+x = 1
+assert eval('x+1') == 2
+
 # exec()
 # filter()
 # float()
 # format()
 # frozenset()
 # globals()
-
-
 # hash()
 # help()
 # hex()
@@ -103,7 +124,6 @@ else:
 # locals()
 # map()
 # max()
-
 # memoryview()
 # min()
 # next()
@@ -118,9 +138,7 @@ else:
 # repr()
 # reversed()
 # round()
-
 # set()
-
 # slice()
 # sorted()
 # staticmethod()
@@ -132,8 +150,5 @@ else:
 # vars()
 # zip()
 # __import__()
-
-
-
 
 print("All PASS!")
