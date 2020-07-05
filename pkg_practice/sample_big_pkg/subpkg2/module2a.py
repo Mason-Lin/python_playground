@@ -1,2 +1,0 @@
-def eggs():
-    print('eggs!')
