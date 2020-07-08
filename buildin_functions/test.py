@@ -116,18 +116,45 @@ print(iterable)
 
 result = dict(filter(function, iterable.items()))
 assert result == {'a': 1}
-# float()
-# format()
-# frozenset()
-# globals()
-# hash()
-# help()
-# hex()
-# id()
+
+assert float(3.5) == 3.5
+
+from string import Template
+a = "abcd"
+print(f"{a!r:=^30}")
+print("{!r:=^30}".format(a))
+mytemp = Template("{$who are $you}")
+mytemp.substitute(who='mason', you="lin")
+
+# frozenset
+import string
+a=[1,2,3]
+b=frozenset(a)
+c=list(b)
+print(c)
+assert a == c
+
+c=zip(string.ascii_lowercase[:3], b)
+print(c)
+d=dict(c)
+print(d)
+
+globals()
+
+hash('a')
+# help() very useful
+assert hex(255) == '0xff'
+
+a=1
+id(a)
+
 # input()
-# int()
-# isinstance()
-# issubclass()
+assert int(0xff) == 255
+assert isinstance(100, int)
+
+from collections import defaultdict
+assert issubclass(defaultdict, dict)
+
 # iter()
 # len()
 # list()
