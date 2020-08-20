@@ -7,8 +7,26 @@ class VWMI:
     def __init__(self, **kwargs):
         self.wmi = wmi.WMI(**kwargs)
 
-    def get_all_namespaces_under_current(self):
-        return self.wmi.instances("__namespace")
+    def get_all_namespaces(self):
+        return self.instances("__namespace")
+
+    def get_all_classes(self):
+        return [c for c in self.classes]
+
+    def get_all_cim_classes(self):
+        return [c for c in self.classes if c.lower().startswith("cim")]
+
+    def get_all_win32_classes(self):
+        return [c for c in self.classes if c.lower().startswith("win32")]
+
+    def get_all_msft_classes(self):
+        return [c for c in self.classes if c.lower().startswith("msft")]
+
+    def get_all_associated_classes(self, class_name):
+        return getattr(self, class_name).associated_classes
+
+    def get_all_instances(self, class_name):
+        return getattr(self, class_name)()
 
     def __getattr__(self, attrName):
         if attrName not in self.__dict__:
@@ -16,10 +34,10 @@ class VWMI:
         return self.__dict__[attrName]
 
 
-if __name__ == "__main__":
+if __name__ == "__main__1":
     vwmi = VWMI()
     print(vwmi)
-    pprint(vwmi.get_all_namespaces_under_current())
+    pprint(vwmi.get_all_namespaces())
     assert (
         wmi.WMI().Win32_SystemBIOS
         == vwmi.wmi.Win32_SystemBIOS
