@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.3 on win32)" generated="20200925 23:39:25.042" rpa="false">
+<suite id="s1" name="Testcase" source="C:\Users\pizza\python_playground\pipenv\subprocess-pipenv\testcase.robot">
+<test id="s1-t1" name="Simple Test Case">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Hello World ${MESSAGE}</arg>
+</arguments>
+<status status="NOT_RUN" starttime="20200925 23:39:25.066" endtime="20200925 23:39:25.067"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${today}</var>
+</assign>
+<status status="NOT_RUN" starttime="20200925 23:39:25.067" endtime="20200925 23:39:25.067"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${today}</arg>
+</arguments>
+<status status="NOT_RUN" starttime="20200925 23:39:25.068" endtime="20200925 23:39:25.068"></status>
+</kw>
+<status status="PASS" starttime="20200925 23:39:25.066" endtime="20200925 23:39:25.069" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200925 23:39:25.044" endtime="20200925 23:39:25.070"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Testcase">Testcase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
