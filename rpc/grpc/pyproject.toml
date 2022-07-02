@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "grpc"
+version = "0.1.0"
+description = ""
+authors = ["Mason Lin <mason.lin1@hp.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+grpcio = "^1.47.0"
+grpcio-tools = "^1.47.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
