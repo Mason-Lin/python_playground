@@ -7,9 +7,11 @@ service Impacket {
 }
 
 message CmdRequest {
-  string name = 1;
+  string cmd = 1;
 }
 
 message CmdReply {
-  string message = 1;
+  int32 returncode = 1;
+  string stdout = 2;
+  string stderr = 3;
 }

@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rvcosmos.proto\x12\x07vcosmos\"\x1a\n\nCmdRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1b\n\x08\x43mdReply\x12\x0f\n\x07message\x18\x01 \x01(\t2?\n\x08Impacket\x12\x33\n\x07wmiexec\x12\x13.vcosmos.CmdRequest\x1a\x11.vcosmos.CmdReply\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rvcosmos.proto\x12\x07vcosmos\"\x19\n\nCmdRequest\x12\x0b\n\x03\x63md\x18\x01 \x01(\t\">\n\x08\x43mdReply\x12\x12\n\nreturncode\x18\x01 \x01(\x05\x12\x0e\n\x06stdout\x18\x02 \x01(\t\x12\x0e\n\x06stderr\x18\x03 \x01(\t2?\n\x08Impacket\x12\x33\n\x07wmiexec\x12\x13.vcosmos.CmdRequest\x1a\x11.vcosmos.CmdReply\"\x00\x62\x06proto3')
 
 
 
@@ -39,9 +39,9 @@ if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
   _CMDREQUEST._serialized_start=26
-  _CMDREQUEST._serialized_end=52
-  _CMDREPLY._serialized_start=54
-  _CMDREPLY._serialized_end=81
-  _IMPACKET._serialized_start=83
-  _IMPACKET._serialized_end=146
+  _CMDREQUEST._serialized_end=51
+  _CMDREPLY._serialized_start=53
+  _CMDREPLY._serialized_end=115
+  _IMPACKET._serialized_start=117
+  _IMPACKET._serialized_end=180
 # @@protoc_insertion_point(module_scope)
