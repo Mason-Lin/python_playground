@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package vcosmos;
+
+service Impacket {
+  rpc wmiexec (CmdRequest) returns (CmdReply) {}
+}
+
+message CmdRequest {
+  string name = 1;
+}
+
+message CmdReply {
+  string message = 1;
+}
