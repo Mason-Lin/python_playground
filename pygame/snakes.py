@@ -1,7 +1,5 @@
-import random
 from enum import Enum
-
-import pygame
+import logging
 
 
 class Direction(Enum):
@@ -97,67 +95,88 @@ class Snake:
         return False
 
 
-class Food:
+class SnakeServer:
+    length = None
+    direction = None
+    body = None
     block_size = None
-    color = (0, 255, 0)
-    x = 0
-    y = 0
+    color = (0, 0, 255)
     bounds = None
+    game_over = False
 
-    def __init__(self, block_size, bounds):
+    def __init__(self, block_size, bounds, user_name, game_over=False):
         self.block_size = block_size
         self.bounds = bounds
-
-    def draw(self, game, window):
-        game.draw.rect(window, self.color, (self.x, self.y, self.block_size, self.block_size))
+        self.respawn()
+        self.game_over = game_over
+        self.user_name = user_name
 
     def respawn(self):
-        blocks_in_x = (self.bounds[0]) / self.block_size
-        blocks_in_y = (self.bounds[1]) / self.block_size
-        self.x = random.randint(0, blocks_in_x - 1) * self.block_size
-        self.y = random.randint(0, blocks_in_y - 1) * self.block_size
+        self.length = 3
+        self.body = [(20, 20), (20, 40), (20, 60)]
+        self.direction = Direction.DOWN
 
+    def move(self):
 
-pygame.init()
-bounds = (720, 480)
-window = pygame.display.set_mode(bounds)
-pygame.display.set_caption("Snake")
+        curr_head = self.body[-1]
+        if self.direction == Direction.DOWN:
+            next_head = (curr_head[0], curr_head[1] + self.block_size)
+            self.body.append(next_head)
+        elif self.direction == Direction.UP:
+            next_head = (curr_head[0], curr_head[1] - self.block_size)
+            self.body.append(next_head)
+        elif self.direction == Direction.RIGHT:
+            next_head = (curr_head[0] + self.block_size, curr_head[1])
+            self.body.append(next_head)
+        elif self.direction == Direction.LEFT:
+            next_head = (curr_head[0] - self.block_size, curr_head[1])
+            self.body.append(next_head)
 
+        if self.length < len(self.body):
+            self.body.pop(0)
+        logging.info(f"user '{self.user_name}' move {self.direction} to {self.body}")
 
-block_size = 20
-food = Food(block_size, bounds)
-font = pygame.font.SysFont("comicsans", 60, True)
-snake = Snake(block_size, bounds)
+    def steer(self, direction):
+        if self.direction == Direction.DOWN and direction != Direction.UP:
+            self.direction = direction
+        elif self.direction == Direction.UP and direction != Direction.DOWN:
+            self.direction = direction
+        elif self.direction == Direction.LEFT and direction != Direction.RIGHT:
+            self.direction = direction
+        elif self.direction == Direction.RIGHT and direction != Direction.LEFT:
+            self.direction = direction
 
+    def eat(self):
+        self.length += 1
 
-run = True
-while run:
-    pygame.time.delay(100)
+    # sees if the head of the snake is over the food
+    def check_for_food(self, food):
+        head = self.body[-1]
+        if head[0] == food.x and head[1] == food.y:
+            self.eat()
+            food.respawn()
 
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            run = False
+    def check_tail_collision(self):
+        head = self.body[-1]
+        has_eaten_tail = False
 
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_LEFT]:
-        snake.steer(Direction.LEFT)
-    elif keys[pygame.K_RIGHT]:
-        snake.steer(Direction.RIGHT)
-    elif keys[pygame.K_UP]:
-        snake.steer(Direction.UP)
-    elif keys[pygame.K_DOWN]:
-        snake.steer(Direction.DOWN)
+        for i in range(len(self.body) - 1):
+            segment = self.body[i]
+            if head[0] == segment[0] and head[1] == segment[1]:
+                has_eaten_tail = True
 
-    snake.move()
-    snake.check_for_food(food)
-    if snake.check_bounds() or snake.check_tail_collision():
-        text = font.render("Game Over", True, (255, 255, 255))
-        window.blit(text, (20, 120))
-        pygame.display.update()
-        pygame.time.delay(1000)
-        snake.respawn()
-        food.respawn()
-    window.fill((0, 0, 0))
-    snake.draw(pygame, window)
-    food.draw(pygame, window)
-    pygame.display.update()
+        return has_eaten_tail
+
+    def check_bounds(self):
+        head = self.body[-1]
+        if head[0] >= self.bounds[0]:
+            return True
+        if head[1] >= self.bounds[1]:
+            return True
+
+        if head[0] < 0:
+            return True
+        if head[1] < 0:
+            return True
+
+        return False

@@ -2,13 +2,18 @@
 name = "snake"
 version = "0.1.0"
 description = ""
-authors = ["Mason Lin <pizza0117@gmail.com>"]
+authors = ["Mason Lin <mason.lin1@hp.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 pygame = "^2.1.2"
 fastapi = "^0.79.0"
+httpx = "^0.23.0"
 uvicorn = "^0.18.2"
+black = "^22.6.0"
+flake8 = "^4.0.1"
+pycodestyle = "^2.8.0"
+pylint = "^2.14.5"
 
 [tool.poetry.dev-dependencies]
 
